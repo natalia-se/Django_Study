@@ -1,0 +1,32 @@
+<!-- AppTwo/templates/AppTwo/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My App{% endblock %}</title>
+    <style>
+      .navbar {
+        display: flex;
+        background-color: #135814;
+        padding: 1em;
+      }
+      .navbar a {
+        color: white;
+        padding: 0.5em 1em;
+        text-decoration: none;
+      }
+      .navbar a:hover {
+        background-color: #9dd751;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'help' %}">Help</a>
+    </div>
+
+    <div class="content">{% block content %}{% endblock %}</div>
+  </body>
+</html>
