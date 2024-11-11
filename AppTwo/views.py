@@ -7,3 +7,6 @@ def index(request):
 
 def help(request):
     return render(request, 'AppTwo/help.html')
+
+def profile(request):
+    return render(request, 'AppTwo/profile.html')
